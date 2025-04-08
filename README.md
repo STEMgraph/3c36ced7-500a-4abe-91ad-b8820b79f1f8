@@ -2,50 +2,66 @@
 {
   "depends_on": [],
   "author": "Stephan Bökelmann",
-  "first_used": "2025-03-17",
-  "keywords": ["learning", "exercises", "education", "practice"]
+  "first_used": "2025-04-08",
+  "keywords": ["scrum", "acceptance criteria", "user story", "project management"]
 }
 --->
 
-# Learning Through Exercises
+# Writing Effective Acceptance Criteria
 
 ## Introduction
-Learning by doing is one of the most effective methods to acquire new knowledge and skills. Rather than passively consuming information, actively engaging in problem-solving fosters deeper understanding and long-term retention. By working through structured exercises, students can grasp complex concepts in a more intuitive and applicable way. This approach is particularly beneficial in technical fields like programming, mathematics, and engineering.
+Acceptance criteria are the foundation of a shared understanding between developers, designers, and stakeholders. They help define when a User Story is “done” and guide both implementation and testing. Clear, actionable criteria reduce ambiguity, enable test automation, and improve product quality.
 
-### Further Readings and Other Sources
-- [The Importance of Practice in Learning](https://www.sciencedirect.com/science/article/pii/S036013151300062X)
-- "The Art of Learning" by Josh Waitzkin
-- [How to Learn Effectively: 5 Key Strategies](https://www.edutopia.org/article/5-research-backed-learning-strategies)
+For example, take the following User Story:
+> *As a user, I want to reset my password so that I can access my account if I forget it.*
+
+Weak acceptance criteria might say:
+- "User can reset password."
+
+This is vague and not testable. A better set of criteria could be:
+- ✓ A reset email is sent to the registered email address.
+- ✓ The reset link expires after 1 hour.
+- ✓ The new password must meet complexity requirements.
+
+Or, using the Gherkin format:
+```
+Given I have requested a password reset
+When I click the link in the email
+Then I am able to set a new password that meets security rules
+```
+
+Such criteria not only guide developers but also help QA teams write tests and stakeholders understand what “done” really means. In this exercise, you will practice writing and evaluating acceptance criteria using real-world examples. of a shared understanding between developers, designers, and stakeholders. They help define when a User Story is “done” and guide both implementation and testing. Clear, actionable criteria reduce ambiguity, enable test automation, and improve product quality. In this exercise, you will practice writing and evaluating acceptance criteria using real-world examples.
+
+## Further Readings
+- Dan North: [Introducing BDD](https://dannorth.net/introducing-bdd/)
+- Agile Alliance: [Acceptance Criteria](https://www.agilealliance.org/glossary/acceptance-criteria)
+- Cucumber: [Gherkin Syntax](https://cucumber.io/docs/gherkin/)
 
 ## Tasks
-1. **Write a Summary**: Summarize the concept of "learning by doing" in 3-5 sentences.
-2. **Example Identification**: List three examples from your own experience where learning through exercises helped you understand a topic better.
-3. **Create an Exercise**: Design a simple exercise for a topic of your choice that someone else could use to practice.
-4. **Follow an Exercise**: Find an online tutorial that includes exercises and complete at least two of them.
-5. **Modify an Existing Exercise**: Take a basic problem from a textbook or online course and modify it to make it slightly more challenging.
-6. **Pair Learning**: Explain a concept to a partner and guide them through an exercise without giving direct answers.
-7. **Review Mistakes**: Look at an exercise you've previously completed incorrectly. Identify why the mistake happened and how to prevent it in the future.
-8. **Time Challenge**: Set a timer for 10 minutes and try to solve as many simple exercises as possible on a given topic.
-9. **Self-Assessment**: Create a checklist to evaluate your own performance in completing exercises effectively.
-10. **Reflect on Progress**: Write a short paragraph on how this structured approach to exercises has influenced your learning.
+1. Choose one of the following User Stories or create your own:
+   - *As a user, I want to reset my password so that I can access my account if I forget it.*
+   - *As a project manager, I want to assign tasks to team members so that responsibilities are clear.*
+   - *As a customer, I want to track my order status so that I know when to expect delivery.*
 
-<details>
-  <summary>Tip for Task 5</summary>
-  Try making small adjustments first, such as increasing the difficulty slightly or adding an extra constraint.
-</details>
+2. Write at least 3 acceptance criteria for the chosen story. Use either:
+   - **Checklist format** (✓ The reset link expires after 1 hour)
+   - **Gherkin format**:
+     ```
+     Given I am on the login page
+     When I click "Forgot Password" and enter my email
+     Then I receive an email with a reset link
+     ```
+
+3. Exchange your story and criteria with a peer and:
+   - Validate if the criteria are testable, unambiguous, and complete
+   - Suggest at least one improvement
 
 ## Questions
-1. What are the main benefits of learning through exercises compared to passive learning?
-2. How do exercises improve long-term retention?
-3. Can you think of a subject where learning through exercises might be less effective? Why?
-4. What role does feedback play in learning through exercises?
-5. How can self-designed exercises improve understanding?
-6. Why is it beneficial to review past mistakes in exercises?
-7. How does explaining a concept to someone else reinforce your own understanding?
-8. What strategies can you use to stay motivated when practicing with exercises?
-9. How can timed challenges contribute to learning efficiency?
-10. How do exercises help bridge the gap between theory and practical application?
+- What is the difference between acceptance criteria and tests?
+- Can a story be implemented without acceptance criteria?
+- Who should define the acceptance criteria in a project team?
+- How can unclear acceptance criteria lead to defects?
 
 ## Advice
-Practice consistently and seek out diverse exercises that challenge different aspects of a topic. Combine exercises with reflection and feedback to maximize your learning efficiency. Don't hesitate to adapt exercises to fit your own needs and ensure that you're actively engaging with the material, rather than just going through the motions.
+Write acceptance criteria collaboratively—ideally during backlog refinement. Keep them simple, specific, and user-centered. Use concrete examples and avoid vague terms like “fast” or “intuitive.” When in doubt, test your criteria by turning them into unit or end-to-end tests.
 
