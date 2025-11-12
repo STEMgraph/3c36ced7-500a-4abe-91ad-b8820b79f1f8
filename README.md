@@ -1,6 +1,7 @@
 <!---
 {
   "id": "3c36ced7-500a-4abe-91ad-b8820b79f1f8",
+  "teaches": "Writing Effective Acceptance Criteria",
   "depends_on": [],
   "author": "Stephan Bökelmann",
   "first_used": "2025-04-08",
